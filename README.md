@@ -23,6 +23,10 @@ hieroglyphy是一个工具和javascript库，用于将字符串，数字和脚�
 
 改进了hieroglyphy中对于花括号的编码方式，缩小体积，借鉴于jsfuck
 
+# 浏览器兼容性
+
+建议在高版本chrome浏览器中运行
+
 <a href="https://github.com/aemkei/jsfuck/blob/master/jsfuck.js">https://github.com/aemkei/jsfuck/blob/master/jsfuck.js
         </a>
     <a
