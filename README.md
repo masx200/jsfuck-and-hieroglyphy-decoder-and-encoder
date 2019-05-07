@@ -9,7 +9,7 @@ hieroglyphy是一个工具和javascript库，用于将字符串，数字和脚�
     ()+[]!
 </code>
 
-    <code>（）[] {} +</code>
+    
 
 <code>
 ()[]{}+!
@@ -17,8 +17,13 @@ hieroglyphy是一个工具和javascript库，用于将字符串，数字和脚�
 
 # 改进编码和解码算法
 
-基于jsfuck和hieroglyphy，并且改进了jsfuck对中文字的编码方式，缩小编码之后的体积，借鉴于hieroglyphy，把中文字转换成Unicode编码
-并且改进了解码的算法
+基于jsfuck和hieroglyphy，并且改进了jsfuck对中文字的编码方式，
+
+缩小编码之后的体积，借鉴于hieroglyphy，把中文字转换成Unicode编码
+
+,并且改进了解码的算法
+
+改进了hieroglyphy中对于花括号的编码方式，缩小体积，借鉴于jsfuck
 
 <a href="https://github.com/aemkei/jsfuck/blob/master/jsfuck.js">https://github.com/aemkei/jsfuck/blob/master/jsfuck.js
         </a>
