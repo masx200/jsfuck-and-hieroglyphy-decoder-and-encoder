@@ -3,11 +3,14 @@ JSfuck and hieroglyphy Decoder and  ENCODER
 
 JSFuck是一种基于JavaScript原子部分的深奥教育编程风格。它只使用六个不同的字符来编写和执行代码
 
+hieroglyphy是一个工具和javascript库，用于将字符串，数字和脚本转换为 的等效序列！在浏览器中运行的字符
+
 <code>
     ()+[]!
 </code>
 
-    hieroglyphy是一个工具和javascript库，用于将字符串，数字和脚本转换为<code>（）[] {} +</code>的等效序列！在浏览器中运行的字符
+    <code>（）[] {} +</code>
+
 <code>
 ()[]{}+!
 </code>
