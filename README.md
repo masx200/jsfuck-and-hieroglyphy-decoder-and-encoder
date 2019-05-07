@@ -19,7 +19,7 @@ hieroglyphy是一个工具和javascript库，用于将字符串，数字和脚�
 
 缩小编码之后的体积，借鉴于hieroglyphy，把中文字转换成Unicode编码
 
-,并且改进了解码的算法，可以同时解码两种编码
+,并且改进了解码的算法，可以同时解码两种编码生成的script和string
 
 改进了hieroglyphy中对于花括号的编码方式，缩小体积，借鉴于jsfuck
 
