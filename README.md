@@ -29,5 +29,8 @@ hieroglyphy是一个工具和javascript库，用于将字符串，数字和脚�
 
 <a href="https://github.com/aemkei/jsfuck/blob/master/jsfuck.js">https://github.com/aemkei/jsfuck/blob/master/jsfuck.js
         </a>
+
+
+
     <a
         href="https://github.com/alcuadrado/hieroglyphy/blob/master/hieroglyphy.js">https://github.com/alcuadrado/hieroglyphy/blob/master/hieroglyphy.js</a>
