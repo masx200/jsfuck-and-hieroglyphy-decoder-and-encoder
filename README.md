@@ -25,7 +25,7 @@ hieroglyphy是一个工具和javascript库，用于将字符串，数字和脚�
 
 # 浏览器兼容性
 
-建议在高版本chrome浏览器中运行
+建议在超高版本chrome或者Firefox浏览器中运行
 
 <a href="https://github.com/aemkei/jsfuck/blob/master/jsfuck.js">https://github.com/aemkei/jsfuck/blob/master/jsfuck.js
         </a>
