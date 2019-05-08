@@ -1,6 +1,19 @@
 ; (function (global, undefined) {
     /*jshint sub:true, evil:true */
     "use strict";
+    API = {
+        hieroglyphyString: hieroglyphyString,
+        hieroglyphyNumber: hieroglyphyNumber,
+        hieroglyphyScript: hieroglyphyScript
+    };
+    window.hieroglyphy = API;
+    if (global.define && global.define.amd) {
+        global.define([], API);
+    } else if (typeof exports !== "undefined") {
+        module.exports = API;
+    } else {
+        global.hieroglyphy = API;
+    }
 
     var numbers,
         _object_Object,
@@ -49,7 +62,7 @@
     _false = "![]+[]";
     _undefined = "[][[]]+[]";
 
-    
+
 
 
     characters[" "] = "(" + _object_Object + ")[" + numbers[7] + "]";
@@ -108,10 +121,10 @@
         numbers[0] + "]";
 
 
-//'{': '(NaN+[]["filter"])[21]',
+    //'{': '(NaN+[]["filter"])[21]',
     // '}': '(NaN+[]["filter"])[37]',
-    characters["{"] ="("+ _NaN+"+[]["+hieroglyphyString("filter")+"])[" + characters[2] + "+" +    characters[1] + "]";
-    characters["}"] ="("+ _NaN+"+[]["+hieroglyphyString("filter")+"])[" + characters[3] + "+" +    characters[7] + "]";
+    characters["{"] = "(" + _NaN + "+[][" + hieroglyphyString("filter") + "])[" + characters[2] + "+" + characters[1] + "]";
+    characters["}"] = "(" + _NaN + "+[][" + hieroglyphyString("filter") + "])[" + characters[3] + "+" + characters[7] + "]";
 
 
     function getHexaString(number, digits) {
@@ -207,18 +220,6 @@
         return functionConstructor + "(" + hieroglyphyString(src) + ")()";
     }
 
-    API = {
-        hieroglyphyString: hieroglyphyString,
-        hieroglyphyNumber: hieroglyphyNumber,
-        hieroglyphyScript: hieroglyphyScript
-    };
 
-    if (global.define && global.define.amd) {
-        global.define([], API);
-    } else if (typeof exports !== "undefined") {
-        module.exports = API;
-    } else {
-        global.hieroglyphy = API;
-    }
 
 })(this);
