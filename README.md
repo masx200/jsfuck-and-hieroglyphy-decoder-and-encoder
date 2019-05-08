@@ -22,6 +22,8 @@ hieroglyphy是一个工具和javascript库，用于将字符串，数字和脚�
 ,并且改进了解码的算法，可以同时解码两种编码生成的script和string
 
 改进了hieroglyphy中对于花括号的编码方式，缩小体积，借鉴于jsfuck
+ 
+例如把"你的男的女的男的女的哦洗涤剂嗯嗯额"转换成"\u4f60\u7684\u7537\u7684\u5973\u7684\u7537\u7684\u5973\u7684\u54e6\u6d17\u6da4\u5242\u55ef\u55ef\u989d"
 
 Improved coding and decoding algorithms
 
