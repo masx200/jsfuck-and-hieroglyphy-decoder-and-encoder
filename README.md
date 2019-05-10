@@ -45,6 +45,8 @@ Improved the coding of curly braces in hieroglyphy, reducing the size, drawing o
 
 建议在最新超高版本chrome或者Firefox或者safari浏览器中运行
 
+或者用webpack或者parcel bundler转换代码,可以在老旧浏览器中运行
+
 <a href="https://github.com/aemkei/jsfuck/blob/master/jsfuck.js">https://github.com/aemkei/jsfuck/blob/master/jsfuck.js
         </a>
 <br>
