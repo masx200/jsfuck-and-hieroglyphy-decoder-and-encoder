@@ -21,6 +21,15 @@ https://masx200.github.io/JSfuck-and-hieroglyphy-Decoder-and-ENCODER/JSFuck---Wr
 
 # 优化了jsfuck的代码执行流程,修复了加载jsfuck导致网页卡顿的问题
 
+Loading jsfuck causes problems with webpages ，May cause the page to be stuck for 5 seconds
+
+
+Execute the following initialization code when the first load is made, causing problems with webpages.
+
+ 
+Modified to execute these initialization code after calling jsfuck's encode method
+
+
 把原本的第一次加载就执行以下初始化代码,导致网页卡顿的问题
 
 ```javascript
