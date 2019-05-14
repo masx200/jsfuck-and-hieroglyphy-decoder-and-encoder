@@ -13,11 +13,41 @@ hieroglyphy是一个工具和javascript库，用于将字符串，数字和脚�
 ()[]{}+!
 </code>
 
-https://masx200.github.io/JSfuck-and-hieroglyphy-Decoder-and-ENCODER/JSfuck%20Decoder%20%20and%20hieroglyphy%20%20decoder.html
+https://masx200.github.io/JSfuck-and-hieroglyphy-Decoder-and-ENCODER/JSfuck-Decoder--and-hieroglyphy--decoder.html
 
-https://masx200.github.io/JSfuck-and-hieroglyphy-Decoder-and-ENCODER/hieroglyphy%20encoder.html
+https://masx200.github.io/JSfuck-and-hieroglyphy-Decoder-and-ENCODER/hieroglyphy-encoder.html
 
-https://masx200.github.io/JSfuck-and-hieroglyphy-Decoder-and-ENCODER/JSFuck%20-%20Write%20any%20JavaScript%20with%206%20Characters_%20[]()!+.html
+https://masx200.github.io/JSfuck-and-hieroglyphy-Decoder-and-ENCODER/JSFuck---Write-any-JavaScript-with-6-Characters_-[]()!+.html
+
+# 优化了jsfuck的代码执行流程,修复了加载jsfuck导致网页卡顿的问题
+
+把原本的第一次加载就执行以下初始化代码,导致网页卡顿的问题
+
+```javascript
+
+ fillMissingDigits();
+    fillMissingChars();
+    replaceMap();
+    replaceStrings();
+```
+
+修改成在调用jsfuck的encode方法之后再执行这些初始化代码
+
+```javascript
+var haveinit=0
+    function encode(input, wrapWithEval) {
+
+if(haveinit===0){
+    fillMissingDigits();
+    fillMissingChars();
+    replaceMap();
+    replaceStrings();
+    haveinit=1
+}
+
+//.....................................
+    }
+```
 
 # 改进编码和解码算法
 
@@ -45,7 +75,7 @@ Improved the coding of curly braces in hieroglyphy, reducing the size, drawing o
 
 建议在最新超高版本chrome或者Firefox或者safari浏览器中运行
 
-或者用webpack或者parcel bundler转换代码,可以在老旧浏览器中运行
+或者用webpack或者parcel bundler,babel转换代码,可以在老旧浏览器中运行
 
 <a href="https://github.com/aemkei/jsfuck/blob/master/jsfuck.js">https://github.com/aemkei/jsfuck/blob/master/jsfuck.js
         </a>

@@ -1,20 +1,25 @@
 /*! JSFuck 0.4.0 - http://jsfuck.com */
 
-(function (self) {
+(function() {
+    
+    self=  typeof (exports) === "undefined" ? window : exports
     self.JSFuck = {
         encode: encode
     };
-    window.JSFuck = { encode: encode };
+    window.JSFuck = {
+        encode: encode
+    };
     var USE_CHAR_CODE = "USE_CHAR_CODE";
 
-    var MIN = 32, MAX = 126;
+    var MIN = 32
+      , MAX = 126;
 
     var SIMPLE = {
         'false': '![]',
         'true': '!![]',
         'undefined': '[][[]]',
         'NaN': '+[![]]',
-        'Infinity': '+(+!+[]+(!+[]+[])[!+[]+!+[]+!+[]]+[+!+[]]+[+[]]+[+[]]+[+[]])' // +"1e1000"
+        'Infinity': '+(+!+[]+(!+[]+[])[!+[]+!+[]+!+[]]+[+!+[]]+[+[]]+[+[]]+[+[]])'// +"1e1000"
     };
 
     var CONSTRUCTORS = {
@@ -110,8 +115,6 @@
 
         //  '\\': `( [][(![]+[])[!+[]+!![]+!![]]+([]+(NaN+[]["filter"])[21](NaN+[]["filter"])[37])[+!![]]+(!![]+[])[+!![]]+(!![]+[])[+[]]][([]+(NaN+[]["filter"])[21](NaN+[]["filter"])[37])[!+[]+!![]+!![]+!![]+!![]]+([]+(NaN+[]["filter"])[21](NaN+[]["filter"])[37])[+!![]]+([][[]]+[])[+!![]]+(![]+[])[!+[]+!![]+!![]]+(!![]+[])[+[]]+(!![]+[])[+!![]]+([][[]]+[])[+[]]+([]+(NaN+[]["filter"])[21](NaN+[]["filter"])[37])[!+[]+!![]+!![]+!![]+!![]]+(!![]+[])[+[]]+([]+(NaN+[]["filter"])[21](NaN+[]["filter"])[37])[+!![]]+(!![]+[])[+!![]]]((!![]+[])[+!![]]+([][[]]+[])[!+[]+!![]+!![]]+(!![]+[])[+[]]+([][[]]+[])[+[]]+(!![]+[])[+!![]]+([][[]]+[])[+!![]]+([]+(NaN+[]["filter"])[21](NaN+[]["filter"])[37])[!+[]+!![]+!![]+!![]+!![]+!![]+!![]]+([][[]]+[])[+[]]+([][[]]+[])[+!![]]+([][[]]+[])[!+[]+!![]+!![]]+(![]+[])[!+[]+!![]+!![]]+([]+(NaN+[]["filter"])[21](NaN+[]["filter"])[37])[!+[]+!![]+!![]+!![]+!![]]+(+(NaN+[]["filter"])[21](NaN+[]["filter"])[37]+[])[+!![]]+((!+[]+!![]+!![]+!![]+!![]+!![]+!![]+!![]+!![])+(!+[]+!![]+!![]+!![]+!![]+!![]+!![]+!![]+!![])+(!+[]+!![]+!![]+!![]+!![]+!![]+!![]))[(!![]+[])[+[]]+([]+(NaN+[]["filter"])[21](NaN+[]["filter"])[37])[+!![]]+([]+([]+(NaN+[]["filter"])[21](NaN+[]["filter"])[37])[([]+(NaN+[]["filter"])[21](NaN+[]["filter"])[37])[!+[]+!![]+!![]+!![]+!![]]+([]+(NaN+[]["filter"])[21](NaN+[]["filter"])[37])[+!![]]+([][[]]+[])[+!![]]+(![]+[])[!+[]+!![]+!![]]+(!![]+[])[+[]]+(!![]+[])[+!![]]+([][[]]+[])[+[]]+([]+(NaN+[]["filter"])[21](NaN+[]["filter"])[37])[!+[]+!![]+!![]+!![]+!![]]+(!![]+[])[+[]]+([]+(NaN+[]["filter"])[21](NaN+[]["filter"])[37])[+!![]]+(!![]+[])[+!![]]])[!+[]+!![]+!![]+!![]+!![]+!![]+!![]+!![]+!![]]+(!![]+[])[+[]]+(!![]+[])[+!![]]+([][[]]+[])[!+[]+!![]+!![]+!![]+!![]]+([][[]]+[])[+!![]]+([]+([]+(NaN+[]["filter"])[21](NaN+[]["filter"])[37])[([]+(NaN+[]["filter"])[21](NaN+[]["filter"])[37])[!+[]+!![]+!![]+!![]+!![]]+([]+(NaN+[]["filter"])[21](NaN+[]["filter"])[37])[+!![]]+([][[]]+[])[+!![]]+(![]+[])[!+[]+!![]+!![]]+(!![]+[])[+[]]+(!![]+[])[+!![]]+([][[]]+[])[+[]]+([]+(NaN+[]["filter"])[21](NaN+[]["filter"])[37])[!+[]+!![]+!![]+!![]+!![]]+(!![]+[])[+[]]+([]+(NaN+[]["filter"])[21](NaN+[]["filter"])[37])[+!![]]+(!![]+[])[+!![]]])[(!+[]+!![]+!![]+!![]+!![]+!![]+!![])+(!+[]+!![]+!![]+!![]+!![]+!![]+!![])]]((!+[]+!![]+!![]+!![]+!![]+!![]+!![]+!![]+!![])+(!+[]+!![]+!![]+!![]+!![]+!![]+!![]+!![]+!![])+(!+[]+!![]+!![]+!![]+!![]+!![]+!![]+!![]))+([][[]]+[])[!+[]+!![]+!![]])()([][(![]+[])[!+[]+!![]+!![]]+([]+(NaN+[]["filter"])[21](NaN+[]["filter"])[37])[+!![]]+(!![]+[])[+!![]]+(!![]+[])[+[]]][([]+(NaN+[]["filter"])[21](NaN+[]["filter"])[37])[!+[]+!![]+!![]+!![]+!![]]+([]+(NaN+[]["filter"])[21](NaN+[]["filter"])[37])[+!![]]+([][[]]+[])[+!![]]+(![]+[])[!+[]+!![]+!![]]+(!![]+[])[+[]]+(!![]+[])[+!![]]+([][[]]+[])[+[]]+([]+(NaN+[]["filter"])[21](NaN+[]["filter"])[37])[!+[]+!![]+!![]+!![]+!![]]+(!![]+[])[+[]]+([]+(NaN+[]["filter"])[21](NaN+[]["filter"])[37])[+!![]]+(!![]+[])[+!![]]]((!![]+[])[+!![]]+([][[]]+[])[!+[]+!![]+!![]]+(!![]+[])[+[]]+([][[]]+[])[+[]]+(!![]+[])[+!![]]+([][[]]+[])[+!![]]+([]+(NaN+[]["filter"])[21](NaN+[]["filter"])[37])[!+[]+!![]+!![]+!![]+!![]+!![]+!![]]+([][[]]+[])[!+[]+!![]+!![]]+(![]+[])[!+[]+!![]+!![]]+([]+(NaN+[]["filter"])[21](NaN+[]["filter"])[37])[!+[]+!![]+!![]+!![]+!![]]+(+(NaN+[]["filter"])[21](NaN+[]["filter"])[37]+[])[+!![]]+((!+[]+!![]+!![]+!![]+!![]+!![]+!![]+!![]+!![])+(!+[]+!![]+!![]+!![]+!![]+!![]+!![]+!![]+!![])+(!+[]+!![]+!![]+!![]+!![]+!![]+!![]))[(!![]+[])[+[]]+([]+(NaN+[]["filter"])[21](NaN+[]["filter"])[37])[+!![]]+([]+([]+(NaN+[]["filter"])[21](NaN+[]["filter"])[37])[([]+(NaN+[]["filter"])[21](NaN+[]["filter"])[37])[!+[]+!![]+!![]+!![]+!![]]+([]+(NaN+[]["filter"])[21](NaN+[]["filter"])[37])[+!![]]+([][[]]+[])[+!![]]+(![]+[])[!+[]+!![]+!![]]+(!![]+[])[+[]]+(!![]+[])[+!![]]+([][[]]+[])[+[]]+([]+(NaN+[]["filter"])[21](NaN+[]["filter"])[37])[!+[]+!![]+!![]+!![]+!![]]+(!![]+[])[+[]]+([]+(NaN+[]["filter"])[21](NaN+[]["filter"])[37])[+!![]]+(!![]+[])[+!![]]])[!+[]+!![]+!![]+!![]+!![]+!![]+!![]+!![]+!![]]+(!![]+[])[+[]]+(!![]+[])[+!![]]+([][[]]+[])[!+[]+!![]+!![]+!![]+!![]]+([][[]]+[])[+!![]]+([]+([]+(NaN+[]["filter"])[21](NaN+[]["filter"])[37])[([]+(NaN+[]["filter"])[21](NaN+[]["filter"])[37])[!+[]+!![]+!![]+!![]+!![]]+([]+(NaN+[]["filter"])[21](NaN+[]["filter"])[37])[+!![]]+([][[]]+[])[+!![]]+(![]+[])[!+[]+!![]+!![]]+(!![]+[])[+[]]+(!![]+[])[+!![]]+([][[]]+[])[+[]]+([]+(NaN+[]["filter"])[21](NaN+[]["filter"])[37])[!+[]+!![]+!![]+!![]+!![]]+(!![]+[])[+[]]+([]+(NaN+[]["filter"])[21](NaN+[]["filter"])[37])[+!![]]+(!![]+[])[+!![]]])[(!+[]+!![]+!![]+!![]+!![]+!![]+!![])+(!+[]+!![]+!![]+!![]+!![]+!![]+!![])]]((!+[]+!![]+!![]+!![]+!![]+!![]+!![]+!![]+!![])+(!+[]+!![]+!![]+!![]+!![]+!![]+!![]+!![]+!![])+(!+[]+!![]+!![]+!![]+!![]+!![]+!![]+!![]))+([][[]]+[])[!+[]+!![]+!![]])()(([]+(NaN+[]["filter"])[21](NaN+[]["filter"])[37])[+[]])[+[]]+(!+[]+!![]+!![]+!![]+!![]+[])+([]+(NaN+[]["filter"])[21](NaN+[]["filter"])[37])[!+[]+!![]+!![]+!![]+!![]]))[0]`  ,
 
-
-
         ']': USE_CHAR_CODE,
         '^': USE_CHAR_CODE,
         '_': USE_CHAR_CODE,
@@ -166,9 +169,15 @@
 
             output = "+[]";
 
-            if (number > 0) { output = "+!" + output; }
-            for (i = 1; i < number; i++) { output = "+!+[]" + output; }
-            if (number > 1) { output = output.substr(1); }
+            if (number > 0) {
+                output = "+!" + output;
+            }
+            for (i = 1; i < number; i++) {
+                output = "+!+[]" + output;
+            }
+            if (number > 1) {
+                output = output.substr(1);
+            }
 
             MAPPING[number] = "[" + output + "]";
             // console.log(number,MAPPING[number])
@@ -180,22 +189,27 @@
         var character = "", value, original, i, key;
 
         function replace(pattern, replacement) {
-            value = value.replace(
-                new RegExp(pattern, "gi"),
-                replacement
-            );
+            value = value.replace(new RegExp(pattern,"gi"), replacement);
         }
 
-        function digitReplacer(_, x) { return MAPPING[x]; }
+        function digitReplacer(_, x) {
+            return MAPPING[x];
+        }
 
         function numberReplacer(_, y) {
             var values = y.split("");
             var head = +(values.shift());
             var output = "+[]";
 
-            if (head > 0) { output = "+!" + output; }
-            for (i = 1; i < head; i++) { output = "+!+[]" + output; }
-            if (head > 1) { output = output.substr(1); }
+            if (head > 0) {
+                output = "+!" + output;
+            }
+            for (i = 1; i < head; i++) {
+                output = "+!+[]" + output;
+            }
+            if (head > 1) {
+                output = output.substr(1);
+            }
 
             return [output].concat(values).join("+").replace(/(\d)/g, digitReplacer);
         }
@@ -203,7 +217,9 @@
         for (i = MIN; i <= MAX; i++) {
             character = String.fromCharCode(i);
             value = MAPPING[character];
-            if (!value) { continue; }
+            if (!value) {
+                continue;
+            }
             original = value;
 
             for (key in CONSTRUCTORS) {
@@ -228,10 +244,8 @@
 
     function replaceStrings() {
         // console.log("replaceStrings")
-        var regEx = /[^\[\]\(\)\!\+]{1}/g,
-            // var regEx = /[^\[\]\(\)\!\+\{\}]{1}/g,  
-            all, value, missing,
-            count = MAX - MIN;
+        var regEx = /[^\[\]\(\)\!\+]{1}/g, // var regEx = /[^\[\]\(\)\!\+\{\}]{1}/g,  
+        all, value, missing, count = MAX - MIN;
 
         function findMissing() {
             var all, value, done = false;
@@ -273,14 +287,23 @@
             }
 
             if (count-- === 0) {
-                error = "Could not compile the following chars:"
+                var error = "Could not compile the following chars:"
                 console.error("Could not compile the following chars:", missing);
                 throw error
             }
         }
     }
-
+var haveinit=0
     function encode(input, wrapWithEval) {
+
+if(haveinit===0){
+    fillMissingDigits();
+    fillMissingChars();
+    replaceMap();
+    replaceStrings();
+    haveinit=1
+}
+      
         // console.log("encode", input, wrapWithEval)
         var output = [];
 
@@ -294,7 +317,7 @@
         }
         r += ".";
 
-        input.replace(new RegExp(r, 'g'), function (c) {
+        input.replace(new RegExp(r,'g'), function(c) {
             // console.log(c)
             var replacement = SIMPLE[c];
             if (replacement) {
@@ -376,21 +399,18 @@
         }
 
         if (wrapWithEval) {
-            output = "[][" + encode("filter") + "]" +
-                "[" + encode("constructor") + "]" +
-                "(" + output + ")()";
+            output = "[][" + encode("filter") + "]" + "[" + encode("constructor") + "]" + "(" + output + ")()";
             return output
         } else {
             return '(' + output + ')';
         }
 
-
     }
 
-    fillMissingDigits();
-    fillMissingChars();
-    replaceMap();
-    replaceStrings();
+    // fillMissingDigits();
+    // fillMissingChars();
+    // replaceMap();
+    // replaceStrings();
 
     // for (var key in MAPPING) console.log(key,MAPPING[key].length)
     // fillMissingChars2();
@@ -400,4 +420,5 @@
     // self.JSFuck = {
     //   encode: encode
     // };
-})(typeof (exports) === "undefined" ? window : exports);
+}
+)();

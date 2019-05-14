@@ -2,12 +2,11 @@
 <html>
 
 <head>
-        <link href="../myfontandtextalign.css" rel="stylesheet">
+    <link href="../myfontandtextalign.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
     <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta charset="utf-8">
     <title>hieroglyphy encoder</title>
@@ -18,7 +17,6 @@
         }
 
         * {
-
             text-align: center;
             margin: 0;
             padding: 0;
@@ -70,7 +68,6 @@
         }
 
         input {
-
             margin: 0 auto;
             position: relative;
             vertical-align: top;
@@ -127,16 +124,13 @@
         /* background-color: #22313F;
             color: #f2f2f2; */
         /* } */
-
         /* textarea:focus {
             /* /* background-color: #1a252f; 
             /* color: #fff; 
         } */
-
         /* textarea {
             height: 550px; 
         }*/
-
         footer {
             width: calc(100% - 40px);
             position: absolute;
@@ -155,8 +149,6 @@
     <nav class="navbar navbar-expand-sm bg-light navbar-light">
         <!-- Brand/logo -->
         <div class="container-fluid">
-
-
             <a class="navbar-brand" href="../index.html">masx200的github主页</a>
             <!-- Toggler/collapsibe Button -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -173,36 +165,29 @@
                             href="../圆周率计算-可设置圆周率位数-可选择线程个数-多线程大数框架webworker输出useragent大数框架/index.html">圆周率计算多线程
                         </a>
                     </li>
-
                     <li class="nav-item">
                         <a class="nav-link" href="../花密网页版-完善修改版-响应式的导航栏/index.html">花密网页版
                         </a>
                     </li>
-
                     <li class="nav-item">
-
                         <a class="nav-link" href="../my-vue-router-project/index.html">基于VUE的主页
                         </a>
-
                     </li>
                     <li class="nav-item">
-
                         <a class="nav-link" href="../my-react-router-test/index.html">基于REACT的主页
                         </a>
-
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="JSfuck Decoder  and hieroglyphy  decoder.html">JSFUCK and hieroglyphy
+                        <a class="nav-link" href="JSfuck-Decoder--and-hieroglyphy--decoder.html">JSFUCK and hieroglyphy
                             decoder</a>
                     </li>
                     <li class="nav-item active">
                         <a class="nav-link">hieroglyphy encoder</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="JSFuck - Write any JavaScript with 6 Characters_ []()!+.html">JSFUCK
+                        <a class="nav-link" href="JSFuck---Write-any-JavaScript-with-6-Characters_-[]()!+.html">JSFUCK
                             encoder</a>
                     </li>
-
                 </ul>
             </div>
         </div>
@@ -210,7 +195,10 @@
     <div class="container">
         <h1 style="
         font-size: 30px;
-    ">编码hieroglyphy <br>encode hieroglyphy</h1>
+    ">
+            编码hieroglyphy <br>encode hieroglyphy
+
+        </h1>
         <p>hieroglyphy是一个工具和javascript库，用于将字符串，数字和脚本转换为（）[] {} +的等效序列！在浏览器中运行的字符。</p>
         <p>()+[]!{}</p>
         <p>浏览器兼容性:
@@ -221,22 +209,21 @@
         <textarea id="input" type="text"></textarea>
         <br />
         <p>
-            <button id="encodescript" type="text">Encode script</button>
+            <button class="btn btn-outline-success" id="encodescript" type="text">Encode script</button>
         </p>
         <br>
         <p>
-            <button id="encodestring" type="text">Encode string</button>
+            <button id="encodestring" type="text" class="btn btn-outline-info">Encode string</button>
         </p>
-
-        <br /><br>
+        <br />
+        <br>
         <textarea id="output"></textarea>
         <div class="actions">
             <span id="stats">44306 chars</span>
-            <button id="run">Run This</button>
+            <button class="btn btn-outline-primary" id="run">Run This</button>
             <!-- href="http://www.jsfuck.com/#" -->
         </div>
         <br>
-
         <!-- <script>
         var i,
             c,
@@ -275,47 +262,51 @@
             //document.body.innerHTML = "<h1>It Works ☺!</h1>";
 
     </script> -->
-        <p><a
+        <p>
+            <a
                 href="https://github.com/masx200/JSfuck-and-hieroglyphy-Decoder-and-ENCODER">https://github.com/masx200/JSfuck-and-hieroglyphy-Decoder-and-ENCODER</a>
         </p>
         <p>
             <a
                 href="https://github.com/alcuadrado/hieroglyphy/blob/master/hieroglyphy.js">https://github.com/alcuadrado/hieroglyphy/blob/master/hieroglyphy.js</a>
         </p>
-
     </div>
-
     <script defer>
-        $("run").onclick = function () {
-            value = eval($("output").value);
+        (onload = () => {
+            var lastclick
 
-            if (lastclick === 'encodestring') {
-                alert('"' + value + '"');
-            } else {
+            $("run").onclick = function () {
+                var value = eval($("output").value);
 
+                if (lastclick === 'encodestring') {
+                    alert('"' + value + '"');
+                } else { }
+                // return false;
             }
-            // return false;
-        };
-        $("encodescript").onclick = encodescript;
-        $("encodestring").onclick = encodestring;
-        // window.onload = () => { encodescript() };
-        $("input").value = "console.log('{你好吗zxcvbnmasdfghjklqwertyuiopQWERTYUIOPASDFGHJKLZXCVBNM}')"
+                ;
+            $("encodescript").onclick = encodescript;
+            $("encodestring").onclick = encodestring;
+            // window.onload = () => { encodescript() };
+            $("input").value = "console.log('{你好吗zxcvbnmasdfghjklqwertyuiopQWERTYUIOPASDFGHJKLZXCVBNM}')"
 
-        function $(id) {
-            return document.getElementById(id);
+            function $(id) {
+                return document.getElementById(id);
+            }
+            function encodescript() {
+                lastclick = 'encodescript'
+                var output = hieroglyphy.hieroglyphyScript(($("input").value))
+                $("output").value = output;
+                $("stats").innerHTML = output.length + " chars";
+            }
+            function encodestring() {
+                lastclick = 'encodestring'
+                var output = hieroglyphy.hieroglyphyString(($("input").value))
+                $("output").value = output;
+                $("stats").innerHTML = output.length + " chars";
+            }
+
         }
-        function encodescript() {
-            lastclick = 'encodescript'
-            var output = hieroglyphy.hieroglyphyScript(($("input").value))
-            $("output").value = output;
-            $("stats").innerHTML = output.length + " chars";
-        }
-        function encodestring() {
-            lastclick = 'encodestring'
-            var output = hieroglyphy.hieroglyphyString(($("input").value))
-            $("output").value = output;
-            $("stats").innerHTML = output.length + " chars";
-        }
+        )()
     </script>
 </body>
 
