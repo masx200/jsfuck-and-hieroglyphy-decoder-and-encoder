@@ -13,7 +13,7 @@ hieroglyphy是一个工具和javascript库，用于将字符串，数字和脚�
 ()[]{}+!
 </code>
 
-https://masx200.github.io/JSfuck-and-hieroglyphy-Decoder-and-ENCODER/JSfuck-Decoder--and-hieroglyphy--decoder.html
+https://masx200.github.io/JSfuck-and-hieroglyphy-Decoder-and-ENCODER/index.html
 
 https://masx200.github.io/JSfuck-and-hieroglyphy-Decoder-and-ENCODER/hieroglyphy-encoder.html
 
