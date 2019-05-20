@@ -1,6 +1,7 @@
 (function(global, undefined) {
+  //   console.log(global);
   /*jshint sub:true, evil:true */
-  "use strict";
+  ("use strict");
   var numbers,
     _object_Object,
     _NaN,
@@ -20,7 +21,11 @@
     hieroglyphyNumber: hieroglyphyNumber,
     hieroglyphyScript: hieroglyphyScript
   };
-  window.hieroglyphy = API;
+  //   window.hieroglyphy = API;
+  global.hieroglyphy = API;
+  //   console.log(
+  //     global.hieroglyphy
+  //   )
   if (global.define && global.define.amd) {
     global.define([], API);
   } else if (typeof exports !== "undefined") {
@@ -322,4 +327,9 @@
   function hieroglyphyScript(src) {
     return functionConstructor + "(" + hieroglyphyString(src) + ")()";
   }
-})(this);
+  return global.hieroglyphy;
+})(
+  (typeof window !== "undefined" ? window : false) ||
+    (typeof WorkerGlobalScope !== "undefined" ? WorkerGlobalScope : false) ||
+    this
+);
