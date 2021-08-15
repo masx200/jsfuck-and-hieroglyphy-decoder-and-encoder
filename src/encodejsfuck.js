@@ -1,4 +1,5 @@
-(() => {
+"use strict";
+!(() => {
     var JSFuck;
     if (typeof require === "function") {
         JSFuck = require("./jsfuck");
@@ -24,11 +25,12 @@
     // window.onload = () => { encode() };
 
     $("run").onclick = function () {
-        value = eval($("output").value);
+        /* value = */
+        new Function($("output").value)();
 
-        if (!$("eval").checked) {
-            alert('"' + value + '"');
-        }
+        // if (!$("eval").checked) {
+        //     alert('"' + value + '"');
+        // }
         return false;
     };
 })();

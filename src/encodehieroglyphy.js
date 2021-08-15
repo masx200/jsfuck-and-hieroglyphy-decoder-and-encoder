@@ -1,4 +1,5 @@
-(() => {
+"use strict";
+!(() => {
     var hieroglyphy;
     if (typeof require === "function") {
         hieroglyphy = require("./hieroglyphy");

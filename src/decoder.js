@@ -1,4 +1,5 @@
-(() => {
+"use strict";
+!(() => {
     function transformstring(code) {
         return String(Function("return " + code)());
     }

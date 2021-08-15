@@ -1,4 +1,5 @@
-(function (global, undefined) {
+"use strict";
+!(function (global, undefined) {
     //   console.log(global);
     /*jshint sub:true, evil:true */
     ("use strict");
