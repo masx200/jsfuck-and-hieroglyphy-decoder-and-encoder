@@ -22,8 +22,8 @@
     },
     "keywords": [],
     "dependencies": {
+        "@babel/preset-env": "^7.15.0",
         "babel-plugin-clean-code": "^0.0.3",
-        "babel-preset-react-app": "^10.0.0",
         "prettier": "^2.3.2"
     },
     "resolutions": {
