@@ -28,11 +28,13 @@
     //   )
     /*    if (global.define && global.define.amd) {
         global.define([], API);
-    } else  */ if (typeof exports !== "undefined") {
+    } else  */
+    if (typeof exports !== "undefined") {
         module.exports = API;
-    } else {
-        global.hieroglyphy = API;
     }
+    // } else {
+    //     global.hieroglyphy = API;
+    // }
 
     numbers = [
         "+[]",
