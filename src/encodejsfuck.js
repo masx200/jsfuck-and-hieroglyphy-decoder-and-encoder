@@ -1,4 +1,10 @@
 (() => {
+    var JSFuck;
+    if (typeof require === "function") {
+        JSFuck = require("./jsfuck");
+    } else {
+        JSFuck = self.JSFuck;
+    }
     $("input").value =
         "console.log('{你好吗zxcvbnmasdfghjklqwertyuiopQWERTYUIOPASDFGHJKLZXCVBNM}')";
 
