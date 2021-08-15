@@ -128,8 +128,8 @@
         try {
             mytext = transformstring(inputcode);
             result = mytext;
-            setDecoded(result);
-            // document.querySelector("#code2").value = mytext;
+            // setDecoded(result);
+            document.querySelector("#code2").value = mytext;
             console.log(transformstring(inputcode));
             console.log("匹配成功");
             return;

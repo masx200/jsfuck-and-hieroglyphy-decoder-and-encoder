@@ -103,16 +103,22 @@
             <br />
             <textarea id="input" type="text"> </textarea>
             <br />
-            <button class="btn btn-outline-primary" id="encode" type="text">
-                Encode
-            </button>
-            <div class="checkbox">
-                <input id="eval" type="checkbox" checked="" />
-                <label for="eval">Eval Source</label>
-            </div>
+            <p>
+                <button class="btn btn-outline-primary" id="encode" type="text">
+                    Encode string
+                </button>
+                <button
+                    class="btn btn-outline-primary"
+                    id="encodescript"
+                    type="text"
+                >
+                    Encode script
+                </button>
+            </p>
+
             <textarea id="output"> </textarea>
             <div class="actions">
-                <span id="stats">44306 chars</span>
+                <span id="stats">0 chars</span>
                 <button class="btn btn-outline-success" id="run">
                     Run This
                 </button>

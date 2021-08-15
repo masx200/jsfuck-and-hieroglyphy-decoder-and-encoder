@@ -14,13 +14,20 @@
     }
 
     function encode() {
-        var output = JSFuck.encode($("input").value, $("eval").checked);
+        var output = JSFuck.encode($("input").value, false);
+        /* $("eval").checked */
         $("output").value = output;
         $("stats").innerHTML = output.length + " chars";
     }
-
+    function encodescript() {
+        var output = JSFuck.encode($("input").value, true);
+        /* $("eval").checked */
+        $("output").value = output;
+        $("stats").innerHTML = output.length + " chars";
+    }
+    $("encodescript").onclick = encodescript;
     $("encode").onclick = encode;
-    $("eval").onchange = encode;
+    // $("eval").onchange = encode;
 
     // window.onload = () => { encode() };
 
