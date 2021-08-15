@@ -4,7 +4,6 @@
     },
     "name": "jsfuck-and-hieroglyphy-decoder-and-encoder",
     "version": "1.0.0",
-    
     "repository": {
         "type": "git",
         "url": "git+https://github.com/masx200/JSfuck-and-hieroglyphy-Decoder-and-ENCODER.git"
