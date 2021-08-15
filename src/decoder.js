@@ -1,4 +1,4 @@
-(onload = () => {
+(() => {
     var postfixandprefix;
     function getpostfixandprefix() {
         if (postfixandprefix) {
