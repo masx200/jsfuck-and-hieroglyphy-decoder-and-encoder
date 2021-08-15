@@ -14,12 +14,6 @@ hieroglyphy 是一个工具和 javascript 库，用于将字符串，数字和�
 ()[]{}+!
 </code>
 
-https://masx200.github.io/JSfuck-and-hieroglyphy-Decoder-and-ENCODER/index.html
-
-https://masx200.github.io/JSfuck-and-hieroglyphy-Decoder-and-ENCODER/hieroglyphy-encoder.html
-
-https://masx200.github.io/JSfuck-and-hieroglyphy-Decoder-and-ENCODER/JSFuck---Write-any-JavaScript-with-6-Characters_-[]()!+.html
-
 # 优化了 jsfuck 的代码执行流程,修复了加载 jsfuck 导致网页卡顿的问题
 
 Loading jsfuck causes problems with webpages ，May cause the page to be stuck for 5 seconds
