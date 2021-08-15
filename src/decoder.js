@@ -1,4 +1,43 @@
 (onload = () => {
+    var postfixandprefix;
+    function getpostfixandprefix() {
+        if (postfixandprefix) {
+            return postfixandprefix;
+        } else {
+            postfixandprefix = [
+                {
+                    prefix: "[][(![]+[])[!+[]+!![]+!![]]+([]+{})[+!![]]+(!![]+[])[+!![]]+(!![]+[])[+[]]][([]+{})[!+[]+!![]+!![]+!![]+!![]]+([]+{})[+!![]]+([][[]]+[])[+!![]]+(![]+[])[!+[]+!![]+!![]]+(!![]+[])[+[]]+(!![]+[])[+!![]]+([][[]]+[])[+[]]+([]+{})[!+[]+!![]+!![]+!![]+!![]]+(!![]+[])[+[]]+([]+{})[+!![]]+(!![]+[])[+!![]]](",
+
+                    postfix: ")()",
+                },
+                {
+                    prefix: "[][(![]+[])[+[]]+([![]]+[][[]])[+!+[]+[+[]]]+(![]+[])[!+[]+!+[]]+(!![]+[])[+[]]+(!![]+[])[!+[]+!+[]+!+[]]+(!![]+[])[+!+[]]][([][(![]+[])[+[]]+([![]]+[][[]])[+!+[]+[+[]]]+(![]+[])[!+[]+!+[]]+(!![]+[])[+[]]+(!![]+[])[!+[]+!+[]+!+[]]+(!![]+[])[+!+[]]]+[])[!+[]+!+[]+!+[]]+(!![]+[][(![]+[])[+[]]+([![]]+[][[]])[+!+[]+[+[]]]+(![]+[])[!+[]+!+[]]+(!![]+[])[+[]]+(!![]+[])[!+[]+!+[]+!+[]]+(!![]+[])[+!+[]]])[+!+[]+[+[]]]+([][[]]+[])[+!+[]]+(![]+[])[!+[]+!+[]+!+[]]+(!![]+[])[+[]]+(!![]+[])[+!+[]]+([][[]]+[])[+[]]+([][(![]+[])[+[]]+([![]]+[][[]])[+!+[]+[+[]]]+(![]+[])[!+[]+!+[]]+(!![]+[])[+[]]+(!![]+[])[!+[]+!+[]+!+[]]+(!![]+[])[+!+[]]]+[])[!+[]+!+[]+!+[]]+(!![]+[])[+[]]+(!![]+[][(![]+[])[+[]]+([![]]+[][[]])[+!+[]+[+[]]]+(![]+[])[!+[]+!+[]]+(!![]+[])[+[]]+(!![]+[])[!+[]+!+[]+!+[]]+(!![]+[])[+!+[]]])[+!+[]+[+[]]]+(!![]+[])[+!+[]]](",
+                    postfix: ")()",
+                },
+                {
+                    prefix:
+                        "[][" +
+                        hieroglyphy.hieroglyphyString("sort") +
+                        "][" +
+                        hieroglyphy.hieroglyphyString("constructor") +
+                        "]" +
+                        "(",
+                    postfix: ")()",
+                },
+                {
+                    prefix:
+                        "[][" +
+                        JSFuck.encode("filter") +
+                        "]" +
+                        "[" +
+                        JSFuck.encode("constructor") +
+                        "](",
+                    postfix: ")()",
+                },
+            ];
+            return postfixandprefix;
+        }
+    }
     var JSFuck;
     if (typeof require === "function") {
         JSFuck = require("./jsfuck");
@@ -63,113 +102,32 @@
 
         //     return;
         // }
-
-        var prefix =
-            "[][(![]+[])[!+[]+!![]+!![]]+([]+{})[+!![]]+(!![]+[])[+!![]]+(!![]+[])[+[]]][([]+{})[!+[]+!![]+!![]+!![]+!![]]+([]+{})[+!![]]+([][[]]+[])[+!![]]+(![]+[])[!+[]+!![]+!![]]+(!![]+[])[+[]]+(!![]+[])[+!![]]+([][[]]+[])[+[]]+([]+{})[!+[]+!![]+!![]+!![]+!![]]+(!![]+[])[+[]]+([]+{})[+!![]]+(!![]+[])[+!![]]](";
-
-        var postfix = ")()";
-        result = isMatching(code.value, patternCreator(prefix, postfix));
-        // console.log(result)
-        if (result) {
-            try {
-                setDecoded(result);
-                console.log("匹配成功");
-                return;
-            } catch {
-                // console.log("匹配错误")
-            }
-            // setDecoded(result);
-            //     console.log(eval(code.value))
-            // mytext = eval(code.value)
-            // document.querySelector('#code2').value = mytext
-        } else {
-            // console.log("匹配错误")
-        }
-
-        prefix =
-            "[][(![]+[])[+[]]+([![]]+[][[]])[+!+[]+[+[]]]+(![]+[])[!+[]+!+[]]+(!![]+[])[+[]]+(!![]+[])[!+[]+!+[]+!+[]]+(!![]+[])[+!+[]]][([][(![]+[])[+[]]+([![]]+[][[]])[+!+[]+[+[]]]+(![]+[])[!+[]+!+[]]+(!![]+[])[+[]]+(!![]+[])[!+[]+!+[]+!+[]]+(!![]+[])[+!+[]]]+[])[!+[]+!+[]+!+[]]+(!![]+[][(![]+[])[+[]]+([![]]+[][[]])[+!+[]+[+[]]]+(![]+[])[!+[]+!+[]]+(!![]+[])[+[]]+(!![]+[])[!+[]+!+[]+!+[]]+(!![]+[])[+!+[]]])[+!+[]+[+[]]]+([][[]]+[])[+!+[]]+(![]+[])[!+[]+!+[]+!+[]]+(!![]+[])[+[]]+(!![]+[])[+!+[]]+([][[]]+[])[+[]]+([][(![]+[])[+[]]+([![]]+[][[]])[+!+[]+[+[]]]+(![]+[])[!+[]+!+[]]+(!![]+[])[+[]]+(!![]+[])[!+[]+!+[]+!+[]]+(!![]+[])[+!+[]]]+[])[!+[]+!+[]+!+[]]+(!![]+[])[+[]]+(!![]+[][(![]+[])[+[]]+([![]]+[][[]])[+!+[]+[+[]]]+(![]+[])[!+[]+!+[]]+(!![]+[])[+[]]+(!![]+[])[!+[]+!+[]+!+[]]+(!![]+[])[+!+[]]])[+!+[]+[+[]]]+(!![]+[])[+!+[]]](";
-        postfix = ")()";
-        result = isMatching(code.value, patternCreator(prefix, postfix));
-
-        if (result) {
-            try {
-                setDecoded(result);
-                console.log("匹配成功");
-                return;
-            } catch {
-                // console.log("匹配错误")
-            }
-            // setDecoded(result);
-            //     console.log(eval(code.value))
-            // mytext = eval(code.value)
-            // document.querySelector('#code2').value = mytext
-        } else {
-            // console.log("匹配错误")
-        }
-
-        prefix =
-            "[][" +
-            hieroglyphy.hieroglyphyString("sort") +
-            "][" +
-            hieroglyphy.hieroglyphyString("constructor") +
-            "]" +
-            "(";
-        postfix = ")()";
-        result = isMatching(code.value, patternCreator(prefix, postfix));
-
-        if (result) {
-            try {
-                setDecoded(result);
-                console.log("匹配成功");
-                return;
-            } catch {
-                // try {
+        for (let { prefix, postfix } of getpostfixandprefix()) {
+            let result = isMatching(
+                code.value,
+                patternCreator(prefix, postfix)
+            );
+            if (result) {
+                try {
+                    setDecoded(result);
+                    console.log("匹配成功");
+                    return;
+                } catch {
+                    // console.log("匹配错误")
+                }
+                // setDecoded(result);
                 //     console.log(eval(code.value))
-                //     mytext = eval(code.value)
-                //     document.querySelector('#code2').value = mytext
-                //     console.log("匹配成功")
-                //     return;
-                // } catch{
-                //     console.log("匹配错误")
-                // }
-            }
-
-            //     console.log(eval(code.value))
-            // mytext = eval(code.value)
-            // document.querySelector('#code2').value = mytext
-        }
-        //  else console.log("匹配错误")
-
-        prefix =
-            "[][" +
-            JSFuck.encode("filter") +
-            "]" +
-            "[" +
-            JSFuck.encode("constructor") +
-            "](";
-        postfix = ")()";
-        result = isMatching(code.value, patternCreator(prefix, postfix));
-
-        if (result) {
-            try {
-                setDecoded(result);
-                console.log("匹配成功");
-                return;
-            } catch {
+                // mytext = eval(code.value)
+                // document.querySelector('#code2').value = mytext
+            } else {
                 // console.log("匹配错误")
             }
-            // setDecoded(result);
-            //     console.log(eval(code.value))
-            // mytext = eval(code.value)
-            // document.querySelector('#code2').value = mytext
         }
-        //  else console.log("匹配错误")
-        // console.log(code.value)
-        // prefix = '[][' + “.* ”+']'+'[' +/.*/+'](';
-
         try {
             mytext = eval(code.value);
-            document.querySelector("#code2").value = mytext;
+            result = mytext;
+            setDecoded(result);
+            // document.querySelector("#code2").value = mytext;
             console.log(eval(code.value));
             console.log("匹配成功");
             return;
@@ -177,8 +135,122 @@
             console.log("匹配错误");
             alert("匹配失败");
         }
+        // var prefix =
+        //     "[][(![]+[])[!+[]+!![]+!![]]+([]+{})[+!![]]+(!![]+[])[+!![]]+(!![]+[])[+[]]][([]+{})[!+[]+!![]+!![]+!![]+!![]]+([]+{})[+!![]]+([][[]]+[])[+!![]]+(![]+[])[!+[]+!![]+!![]]+(!![]+[])[+[]]+(!![]+[])[+!![]]+([][[]]+[])[+[]]+([]+{})[!+[]+!![]+!![]+!![]+!![]]+(!![]+[])[+[]]+([]+{})[+!![]]+(!![]+[])[+!![]]](";
 
-        // setDecoded(code.value);
+        // var postfix = ")()";
+        // result = isMatching(code.value, patternCreator(prefix, postfix));
+        // // console.log(result)
+        // if (result) {
+        //     try {
+        //         setDecoded(result);
+        //         console.log("匹配成功");
+        //         return;
+        //     } catch {
+        //         // console.log("匹配错误")
+        //     }
+        //     // setDecoded(result);
+        //     //     console.log(eval(code.value))
+        //     // mytext = eval(code.value)
+        //     // document.querySelector('#code2').value = mytext
+        // } else {
+        //     // console.log("匹配错误")
+        // }
+
+        // prefix =
+        //     "[][(![]+[])[+[]]+([![]]+[][[]])[+!+[]+[+[]]]+(![]+[])[!+[]+!+[]]+(!![]+[])[+[]]+(!![]+[])[!+[]+!+[]+!+[]]+(!![]+[])[+!+[]]][([][(![]+[])[+[]]+([![]]+[][[]])[+!+[]+[+[]]]+(![]+[])[!+[]+!+[]]+(!![]+[])[+[]]+(!![]+[])[!+[]+!+[]+!+[]]+(!![]+[])[+!+[]]]+[])[!+[]+!+[]+!+[]]+(!![]+[][(![]+[])[+[]]+([![]]+[][[]])[+!+[]+[+[]]]+(![]+[])[!+[]+!+[]]+(!![]+[])[+[]]+(!![]+[])[!+[]+!+[]+!+[]]+(!![]+[])[+!+[]]])[+!+[]+[+[]]]+([][[]]+[])[+!+[]]+(![]+[])[!+[]+!+[]+!+[]]+(!![]+[])[+[]]+(!![]+[])[+!+[]]+([][[]]+[])[+[]]+([][(![]+[])[+[]]+([![]]+[][[]])[+!+[]+[+[]]]+(![]+[])[!+[]+!+[]]+(!![]+[])[+[]]+(!![]+[])[!+[]+!+[]+!+[]]+(!![]+[])[+!+[]]]+[])[!+[]+!+[]+!+[]]+(!![]+[])[+[]]+(!![]+[][(![]+[])[+[]]+([![]]+[][[]])[+!+[]+[+[]]]+(![]+[])[!+[]+!+[]]+(!![]+[])[+[]]+(!![]+[])[!+[]+!+[]+!+[]]+(!![]+[])[+!+[]]])[+!+[]+[+[]]]+(!![]+[])[+!+[]]](";
+        // postfix = ")()";
+        // result = isMatching(code.value, patternCreator(prefix, postfix));
+
+        // if (result) {
+        //     try {
+        //         setDecoded(result);
+        //         console.log("匹配成功");
+        //         return;
+        //     } catch {
+        //         // console.log("匹配错误")
+        //     }
+        //     // setDecoded(result);
+        //     //     console.log(eval(code.value))
+        //     // mytext = eval(code.value)
+        //     // document.querySelector('#code2').value = mytext
+        // } else {
+        //     // console.log("匹配错误")
+        // }
+
+        // prefix =
+        //     "[][" +
+        //     hieroglyphy.hieroglyphyString("sort") +
+        //     "][" +
+        //     hieroglyphy.hieroglyphyString("constructor") +
+        //     "]" +
+        //     "(";
+        // postfix = ")()";
+        // result = isMatching(code.value, patternCreator(prefix, postfix));
+
+        // if (result) {
+        //     try {
+        //         setDecoded(result);
+        //         console.log("匹配成功");
+        //         return;
+        //     } catch {
+        //         // try {
+        //         //     console.log(eval(code.value))
+        //         //     mytext = eval(code.value)
+        //         //     document.querySelector('#code2').value = mytext
+        //         //     console.log("匹配成功")
+        //         //     return;
+        //         // } catch{
+        //         //     console.log("匹配错误")
+        //         // }
+        //     }
+
+        //     //     console.log(eval(code.value))
+        //     // mytext = eval(code.value)
+        //     // document.querySelector('#code2').value = mytext
+        // }
+        //  else console.log("匹配错误")
+
+        //     prefix =
+        //         "[][" +
+        //         JSFuck.encode("filter") +
+        //         "]" +
+        //         "[" +
+        //         JSFuck.encode("constructor") +
+        //         "](";
+        //     postfix = ")()";
+        //     result = isMatching(code.value, patternCreator(prefix, postfix));
+
+        //     if (result) {
+        //         try {
+        //             setDecoded(result);
+        //             console.log("匹配成功");
+        //             return;
+        //         } catch {
+        //             // console.log("匹配错误")
+        //         }
+        //         // setDecoded(result);
+        //         //     console.log(eval(code.value))
+        //         // mytext = eval(code.value)
+        //         // document.querySelector('#code2').value = mytext
+        //     }
+        //     //  else console.log("匹配错误")
+        //     // console.log(code.value)
+        //     // prefix = '[][' + “.* ”+']'+'[' +/.*/+'](';
+
+        //     // try {
+        //     //     mytext = eval(code.value);
+        //     //     document.querySelector("#code2").value = mytext;
+        //     //     console.log(eval(code.value));
+        //     //     console.log("匹配成功");
+        //     //     return;
+        //     // } catch {
+        //     //     console.log("匹配错误");
+        //     //     alert("匹配失败");
+        //     // }
+
+        //     // setDecoded(code.value);
+        // }
+        // setTimeout(onload,0)
     }
-    // setTimeout(onload,0)
 })();
