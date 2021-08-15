@@ -1,4 +1,7 @@
 (() => {
+    function transformstring(code) {
+        return String(Function("return " + code)());
+    }
     var postfixandprefix;
     function getpostfixandprefix() {
         if (postfixandprefix) {
@@ -52,7 +55,7 @@
     }
     var replacedPrefix, replacedPostfix, result, mytext;
     $("run").onclick = function () {
-        eval($("code2").value);
+        transformstring($("code2").value);
     };
     function $(id) {
         return document.getElementById(id);
@@ -81,8 +84,8 @@
     function setDecoded(decodedCode) {
         var code2 = document.querySelector("#code2");
 
-        code2.value = eval(decodedCode);
-        console.log(eval(decodedCode));
+        code2.value = transformstring(decodedCode);
+        console.log(transformstring(decodedCode));
     }
     // window.decode=decode
     function decode() {
@@ -94,7 +97,7 @@
         }
         // var prefix = '[][' + JSFuck.encode('fill') + ']' +
         //     '[' + JSFuck.encode('constructor') + ']' +
-        //     '(' + JSFuck.encode('return eval') + ')()(';
+        //     '(' + JSFuck.encode('return transformstring') + ')()(';
         // var postfix = ')';
         // var result = isMatching(inputcode, patternCreator(prefix, postfix));
 
@@ -114,19 +117,19 @@
                     // console.log("匹配错误")
                 }
                 // setDecoded(result);
-                //     console.log(eval(inputcode))
-                // mytext = eval(inputcode)
+                //     console.log(transformstring(inputcode))
+                // mytext = transformstring(inputcode)
                 // document.querySelector('#code2').value = mytext
             } else {
                 // console.log("匹配错误")
             }
         }
         try {
-            mytext = eval(inputcode);
+            mytext = transformstring(inputcode);
             result = mytext;
             setDecoded(result);
             // document.querySelector("#code2").value = mytext;
-            console.log(eval(inputcode));
+            console.log(transformstring(inputcode));
             console.log("匹配成功");
             return;
         } catch {
@@ -148,8 +151,8 @@
         //         // console.log("匹配错误")
         //     }
         //     // setDecoded(result);
-        //     //     console.log(eval(inputcode))
-        //     // mytext = eval(inputcode)
+        //     //     console.log(transformstring(inputcode))
+        //     // mytext = transformstring(inputcode)
         //     // document.querySelector('#code2').value = mytext
         // } else {
         //     // console.log("匹配错误")
@@ -169,8 +172,8 @@
         //         // console.log("匹配错误")
         //     }
         //     // setDecoded(result);
-        //     //     console.log(eval(inputcode))
-        //     // mytext = eval(inputcode)
+        //     //     console.log(transformstring(inputcode))
+        //     // mytext = transformstring(inputcode)
         //     // document.querySelector('#code2').value = mytext
         // } else {
         //     // console.log("匹配错误")
@@ -193,8 +196,8 @@
         //         return;
         //     } catch {
         //         // try {
-        //         //     console.log(eval(inputcode))
-        //         //     mytext = eval(inputcode)
+        //         //     console.log(transformstring(inputcode))
+        //         //     mytext = transformstring(inputcode)
         //         //     document.querySelector('#code2').value = mytext
         //         //     console.log("匹配成功")
         //         //     return;
@@ -203,8 +206,8 @@
         //         // }
         //     }
 
-        //     //     console.log(eval(inputcode))
-        //     // mytext = eval(inputcode)
+        //     //     console.log(transformstring(inputcode))
+        //     // mytext = transformstring(inputcode)
         //     // document.querySelector('#code2').value = mytext
         // }
         //  else console.log("匹配错误")
@@ -228,8 +231,8 @@
         //             // console.log("匹配错误")
         //         }
         //         // setDecoded(result);
-        //         //     console.log(eval(inputcode))
-        //         // mytext = eval(inputcode)
+        //         //     console.log(transformstring(inputcode))
+        //         // mytext = transformstring(inputcode)
         //         // document.querySelector('#code2').value = mytext
         //     }
         //     //  else console.log("匹配错误")
@@ -237,9 +240,9 @@
         //     // prefix = '[][' + “.* ”+']'+'[' +/.*/+'](';
 
         //     // try {
-        //     //     mytext = eval(inputcode);
+        //     //     mytext = transformstring(inputcode);
         //     //     document.querySelector("#code2").value = mytext;
-        //     //     console.log(eval(inputcode));
+        //     //     console.log(transformstring(inputcode));
         //     //     console.log("匹配成功");
         //     //     return;
         //     // } catch {
