@@ -10,7 +10,7 @@
     global.JSFuck = {
         encode: encode,
     };
-    module.exports = global.JSFuck;
+    typeof module !== "undefined" && (module.exports = global.JSFuck);
     var USE_CHAR_CODE = "USE_CHAR_CODE";
 
     var MIN = 32,
