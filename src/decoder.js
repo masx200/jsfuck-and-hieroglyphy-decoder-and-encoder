@@ -1,5 +1,5 @@
 (onload = () => {
-    var replacedPrefix, replacedPostfix, result, prefix, postfix, mytext;
+    var replacedPrefix, replacedPostfix, result, mytext;
     $("run").onclick = function () {
         eval($("code2").value);
     };

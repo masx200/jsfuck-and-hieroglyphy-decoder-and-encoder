@@ -15,7 +15,7 @@
     },
     "homepage": "https://github.com/masx200/JSfuck-and-hieroglyphy-Decoder-and-ENCODER#readme",
     "scripts": {
-        "format": "npx prettier --write *.md *.json */*.js */*.html"
+        "format": "npx prettier --write *.md *.json */*.js */*.html */*.css"
     },
     "keywords": [],
     "dependencies": {
