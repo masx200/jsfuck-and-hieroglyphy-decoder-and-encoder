@@ -87,7 +87,8 @@
     // window.decode=decode
     function decode() {
         var code = document.querySelector("#code");
-        if (code.value.length === 0) {
+        const inputcode = code.value.trim();
+        if (inputcode.length === 0) {
             alert("输入框不能为空");
             return;
         }
@@ -95,7 +96,7 @@
         //     '[' + JSFuck.encode('constructor') + ']' +
         //     '(' + JSFuck.encode('return eval') + ')()(';
         // var postfix = ')';
-        // var result = isMatching(code.value, patternCreator(prefix, postfix));
+        // var result = isMatching(inputcode, patternCreator(prefix, postfix));
 
         // if (result) {
         //     setDecoded(result);
@@ -103,10 +104,7 @@
         //     return;
         // }
         for (let { prefix, postfix } of getpostfixandprefix()) {
-            let result = isMatching(
-                code.value,
-                patternCreator(prefix, postfix)
-            );
+            let result = isMatching(inputcode, patternCreator(prefix, postfix));
             if (result) {
                 try {
                     setDecoded(result);
@@ -116,19 +114,19 @@
                     // console.log("匹配错误")
                 }
                 // setDecoded(result);
-                //     console.log(eval(code.value))
-                // mytext = eval(code.value)
+                //     console.log(eval(inputcode))
+                // mytext = eval(inputcode)
                 // document.querySelector('#code2').value = mytext
             } else {
                 // console.log("匹配错误")
             }
         }
         try {
-            mytext = eval(code.value);
+            mytext = eval(inputcode);
             result = mytext;
             setDecoded(result);
             // document.querySelector("#code2").value = mytext;
-            console.log(eval(code.value));
+            console.log(eval(inputcode));
             console.log("匹配成功");
             return;
         } catch {
@@ -139,7 +137,7 @@
         //     "[][(![]+[])[!+[]+!![]+!![]]+([]+{})[+!![]]+(!![]+[])[+!![]]+(!![]+[])[+[]]][([]+{})[!+[]+!![]+!![]+!![]+!![]]+([]+{})[+!![]]+([][[]]+[])[+!![]]+(![]+[])[!+[]+!![]+!![]]+(!![]+[])[+[]]+(!![]+[])[+!![]]+([][[]]+[])[+[]]+([]+{})[!+[]+!![]+!![]+!![]+!![]]+(!![]+[])[+[]]+([]+{})[+!![]]+(!![]+[])[+!![]]](";
 
         // var postfix = ")()";
-        // result = isMatching(code.value, patternCreator(prefix, postfix));
+        // result = isMatching(inputcode, patternCreator(prefix, postfix));
         // // console.log(result)
         // if (result) {
         //     try {
@@ -150,8 +148,8 @@
         //         // console.log("匹配错误")
         //     }
         //     // setDecoded(result);
-        //     //     console.log(eval(code.value))
-        //     // mytext = eval(code.value)
+        //     //     console.log(eval(inputcode))
+        //     // mytext = eval(inputcode)
         //     // document.querySelector('#code2').value = mytext
         // } else {
         //     // console.log("匹配错误")
@@ -160,7 +158,7 @@
         // prefix =
         //     "[][(![]+[])[+[]]+([![]]+[][[]])[+!+[]+[+[]]]+(![]+[])[!+[]+!+[]]+(!![]+[])[+[]]+(!![]+[])[!+[]+!+[]+!+[]]+(!![]+[])[+!+[]]][([][(![]+[])[+[]]+([![]]+[][[]])[+!+[]+[+[]]]+(![]+[])[!+[]+!+[]]+(!![]+[])[+[]]+(!![]+[])[!+[]+!+[]+!+[]]+(!![]+[])[+!+[]]]+[])[!+[]+!+[]+!+[]]+(!![]+[][(![]+[])[+[]]+([![]]+[][[]])[+!+[]+[+[]]]+(![]+[])[!+[]+!+[]]+(!![]+[])[+[]]+(!![]+[])[!+[]+!+[]+!+[]]+(!![]+[])[+!+[]]])[+!+[]+[+[]]]+([][[]]+[])[+!+[]]+(![]+[])[!+[]+!+[]+!+[]]+(!![]+[])[+[]]+(!![]+[])[+!+[]]+([][[]]+[])[+[]]+([][(![]+[])[+[]]+([![]]+[][[]])[+!+[]+[+[]]]+(![]+[])[!+[]+!+[]]+(!![]+[])[+[]]+(!![]+[])[!+[]+!+[]+!+[]]+(!![]+[])[+!+[]]]+[])[!+[]+!+[]+!+[]]+(!![]+[])[+[]]+(!![]+[][(![]+[])[+[]]+([![]]+[][[]])[+!+[]+[+[]]]+(![]+[])[!+[]+!+[]]+(!![]+[])[+[]]+(!![]+[])[!+[]+!+[]+!+[]]+(!![]+[])[+!+[]]])[+!+[]+[+[]]]+(!![]+[])[+!+[]]](";
         // postfix = ")()";
-        // result = isMatching(code.value, patternCreator(prefix, postfix));
+        // result = isMatching(inputcode, patternCreator(prefix, postfix));
 
         // if (result) {
         //     try {
@@ -171,8 +169,8 @@
         //         // console.log("匹配错误")
         //     }
         //     // setDecoded(result);
-        //     //     console.log(eval(code.value))
-        //     // mytext = eval(code.value)
+        //     //     console.log(eval(inputcode))
+        //     // mytext = eval(inputcode)
         //     // document.querySelector('#code2').value = mytext
         // } else {
         //     // console.log("匹配错误")
@@ -186,7 +184,7 @@
         //     "]" +
         //     "(";
         // postfix = ")()";
-        // result = isMatching(code.value, patternCreator(prefix, postfix));
+        // result = isMatching(inputcode, patternCreator(prefix, postfix));
 
         // if (result) {
         //     try {
@@ -195,8 +193,8 @@
         //         return;
         //     } catch {
         //         // try {
-        //         //     console.log(eval(code.value))
-        //         //     mytext = eval(code.value)
+        //         //     console.log(eval(inputcode))
+        //         //     mytext = eval(inputcode)
         //         //     document.querySelector('#code2').value = mytext
         //         //     console.log("匹配成功")
         //         //     return;
@@ -205,8 +203,8 @@
         //         // }
         //     }
 
-        //     //     console.log(eval(code.value))
-        //     // mytext = eval(code.value)
+        //     //     console.log(eval(inputcode))
+        //     // mytext = eval(inputcode)
         //     // document.querySelector('#code2').value = mytext
         // }
         //  else console.log("匹配错误")
@@ -219,7 +217,7 @@
         //         JSFuck.encode("constructor") +
         //         "](";
         //     postfix = ")()";
-        //     result = isMatching(code.value, patternCreator(prefix, postfix));
+        //     result = isMatching(inputcode, patternCreator(prefix, postfix));
 
         //     if (result) {
         //         try {
@@ -230,18 +228,18 @@
         //             // console.log("匹配错误")
         //         }
         //         // setDecoded(result);
-        //         //     console.log(eval(code.value))
-        //         // mytext = eval(code.value)
+        //         //     console.log(eval(inputcode))
+        //         // mytext = eval(inputcode)
         //         // document.querySelector('#code2').value = mytext
         //     }
         //     //  else console.log("匹配错误")
-        //     // console.log(code.value)
+        //     // console.log(inputcode)
         //     // prefix = '[][' + “.* ”+']'+'[' +/.*/+'](';
 
         //     // try {
-        //     //     mytext = eval(code.value);
+        //     //     mytext = eval(inputcode);
         //     //     document.querySelector("#code2").value = mytext;
-        //     //     console.log(eval(code.value));
+        //     //     console.log(eval(inputcode));
         //     //     console.log("匹配成功");
         //     //     return;
         //     // } catch {
@@ -249,7 +247,7 @@
         //     //     alert("匹配失败");
         //     // }
 
-        //     // setDecoded(code.value);
+        //     // setDecoded(inputcode);
         // }
         // setTimeout(onload,0)
     }
