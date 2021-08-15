@@ -1,9 +1,24 @@
 {
     "devDependencies": {},
-    "name": "JSfuck-and-hieroglyphy-Decoder-and-ENCODER",
+    "name": "jsfuck-and-hieroglyphy-decoder-and-encoder",
     "version": "1.0.0",
     "main": "index.js",
-    "repository": "https://github.com/masx200/JSfuck-and-hieroglyphy-Decoder-and-ENCODER.git",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/masx200/JSfuck-and-hieroglyphy-Decoder-and-ENCODER.git"
+    },
     "author": "masx200 <34191203+masx200@users.noreply.github.com>",
-    "license": "MIT"
+    "license": "MIT",
+    "description": "JSfuck and hieroglyphy Decoder and  ENCODER",
+    "bugs": {
+        "url": "https://github.com/masx200/JSfuck-and-hieroglyphy-Decoder-and-ENCODER/issues"
+    },
+    "homepage": "https://github.com/masx200/JSfuck-and-hieroglyphy-Decoder-and-ENCODER#readme",
+    "scripts": {
+        "format": "npx prettier --write *.md *.json */*.js */*.html"
+    },
+    "keywords": [],
+    "dependencies": {
+        "prettier": "^2.3.2"
+    }
 }
