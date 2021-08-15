@@ -1,6 +1,6 @@
 module.exports = function (api) {
     return {
-        presets: [],
+        presets: ["babel-preset-react-app"],
         plugins: [api.env("production") && "babel-plugin-clean-code"].filter(
             Boolean
         ),
