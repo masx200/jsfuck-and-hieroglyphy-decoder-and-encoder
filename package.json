@@ -18,10 +18,11 @@
     "scripts": {
         "build": "parcel build ./src/*.html",
         "start": "parcel serve ./src/*.html",
-        "format": "npx prettier --write *.md *.json */*.js */*.html */*.css"
+        "format": "npx prettier --write *.md *.json */*.js */*.html */*.css *.js"
     },
     "keywords": [],
     "dependencies": {
+        "babel-plugin-clean-code": "^0.0.3",
         "prettier": "^2.3.2"
     }
 }
