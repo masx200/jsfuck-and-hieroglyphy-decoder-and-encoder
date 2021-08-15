@@ -1,5 +1,7 @@
 {
-    "devDependencies": {},
+    "devDependencies": {
+        "parcel": "^2.0.0-rc.0"
+    },
     "name": "jsfuck-and-hieroglyphy-decoder-and-encoder",
     "version": "1.0.0",
     "main": "index.js",
@@ -15,6 +17,8 @@
     },
     "homepage": "https://github.com/masx200/JSfuck-and-hieroglyphy-Decoder-and-ENCODER#readme",
     "scripts": {
+        "build": "parcel build ./src/*.html",
+        "start": "parcel serve ./src/*.html",
         "format": "npx prettier --write *.md *.json */*.js */*.html */*.css"
     },
     "keywords": [],
