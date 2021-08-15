@@ -8,10 +8,10 @@
     var lastclick;
 
     $("run").onclick = function () {
-        var value = eval($("output").value);
+        var value = new Function($("output").value)();
 
         if (lastclick === "encodestring") {
-            alert('"' + value + '"');
+            // alert('"' + value + '"');
         } else {
         }
         // return false;
