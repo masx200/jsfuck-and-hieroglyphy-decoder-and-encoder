@@ -22,13 +22,13 @@
         hieroglyphyScript: hieroglyphyScript,
     };
     //   window.hieroglyphy = API;
-    global.hieroglyphy = API;
+    typeof exports === "undefined" && (global.hieroglyphy = API);
     //   console.log(
     //     global.hieroglyphy
     //   )
-    if (global.define && global.define.amd) {
+    /*    if (global.define && global.define.amd) {
         global.define([], API);
-    } else if (typeof exports !== "undefined") {
+    } else  */ if (typeof exports !== "undefined") {
         module.exports = API;
     } else {
         global.hieroglyphy = API;

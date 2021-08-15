@@ -2,15 +2,16 @@
 (function (global) {
     // console.log(global)
     //   "use strict";
-    self = typeof exports === "undefined" ? window : exports;
-    self.JSFuck = {
-        encode: encode,
-    };
+    // self = typeof exports === "undefined" ? window : exports;
+    // self.JSFuck = {
+    //     encode: encode,
+    // };
     // console.log(this)
-    global.JSFuck = {
-        encode: encode,
-    };
-    typeof module !== "undefined" && (module.exports = global.JSFuck);
+    typeof exports === "undefined" &&
+        (global.JSFuck = {
+            encode: encode,
+        });
+    typeof module !== "undefined" && (module.exports = { encode });
     var USE_CHAR_CODE = "USE_CHAR_CODE";
 
     var MIN = 32,
