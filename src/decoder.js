@@ -1,4 +1,16 @@
 (onload = () => {
+    var JSFuck;
+    if (typeof require === "function") {
+        JSFuck = require("./jsfuck");
+    } else {
+        JSFuck = self.JSFuck;
+    }
+    var hieroglyphy;
+    if (typeof require === "function") {
+        hieroglyphy = require("./hieroglyphy");
+    } else {
+        hieroglyphy = self.hieroglyphy;
+    }
     var replacedPrefix, replacedPostfix, result, mytext;
     $("run").onclick = function () {
         eval($("code2").value);
