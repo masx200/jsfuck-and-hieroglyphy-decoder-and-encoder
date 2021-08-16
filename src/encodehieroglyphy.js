@@ -1,13 +1,6 @@
 "use strict";
+import hieroglyphy from "./hieroglyphy.js";
 !(() => {
-    var hieroglyphy;
-    if (typeof require === "function") {
-        hieroglyphy = require("./hieroglyphy");
-    } else {
-        hieroglyphy = self.hieroglyphy;
-    }
-    // var lastclick;
-
     $("run").onclick = function () {
         /* var value = */
         new Function($("output").value)();

@@ -1,11 +1,6 @@
 "use strict";
+import JSFuck from "./jsfuck.js";
 !(() => {
-    var JSFuck;
-    if (typeof require === "function") {
-        JSFuck = require("./jsfuck");
-    } else {
-        JSFuck = self.JSFuck;
-    }
     $("input").value =
         "console.log('{你好吗zxcvbnmasdfghjklqwertyuiopQWERTYUIOPASDFGHJKLZXCVBNM}')";
 
@@ -38,6 +33,6 @@
         // if (!$("eval").checked) {
         //     alert('"' + value + '"');
         // }
-        return false;
+        // return false;
     };
 })();

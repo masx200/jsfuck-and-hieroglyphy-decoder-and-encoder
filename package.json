@@ -1,9 +1,14 @@
 {
-    "devDependencies": {
-        "parcel": "2.0.0-beta.3.1"
-    },
     "name": "@masx200/jsfuck-and-hieroglyphy-decoder-and-encoder",
     "version": "2.0.0",
+    "module": "src/index.js",
+    "devDependencies": {
+        "@babel/preset-env": "^7.15.0",
+        "babel-plugin-clean-code": "^0.0.3",
+        "core-js": "3",
+        "prettier": "^2.3.2",
+        "parcel": "2.0.0-beta.3.1"
+    },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/masx200/JSfuck-and-hieroglyphy-Decoder-and-ENCODER.git"
@@ -21,12 +26,7 @@
         "format": "npx prettier --write *.md *.json */*.js */*.html */*.css *.js"
     },
     "keywords": [],
-    "dependencies": {
-        "@babel/preset-env": "^7.15.0",
-        "babel-plugin-clean-code": "^0.0.3",
-        "core-js": "3",
-        "prettier": "^2.3.2"
-    },
+    "dependencies": {},
     "resolutions": {
         "postcss": "8.3.6"
     }
