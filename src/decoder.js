@@ -19,7 +19,7 @@ function decodehandler() {
     try {
         setoutput(decode(code.value));
     } catch (error) {
-        alert('解码失败')
+        alert("解码失败");
         throw error;
     }
 }

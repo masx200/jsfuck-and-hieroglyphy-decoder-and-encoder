@@ -1,4 +1,8 @@
 {
+    "publishConfig": {
+        "registry": "https://registry.npmjs.org/",
+        "access": "public"
+    },
     "name": "@masx200/jsfuck-and-hieroglyphy-decoder-and-encoder",
     "version": "2.0.0",
     "module": "src/index.js",
