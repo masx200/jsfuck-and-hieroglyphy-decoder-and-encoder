@@ -14,6 +14,29 @@ hieroglyphy 是一个工具和 javascript 库，用于将字符串，数字和�
 ()[]{}+!
 </code>
 
+# 使用方法
+
+```js
+import {
+    jsfuckString,
+    jsfuckScript,
+    hieroglyphyString,
+    hieroglyphyScript,
+    decode,
+} from "@masx200/jsfuck-and-hieroglyphy-decoder-and-encoder";
+```
+
+四种编码方法:
+
+`jsfuckString`,
+`jsfuckScript`,
+`hieroglyphyString`,
+`hieroglyphyScript`,
+
+一种解码方法:
+
+`decode`
+
 # 优化了 jsfuck 的代码执行流程,修复了加载 jsfuck 导致网页卡顿的问题
 
 Loading jsfuck causes problems with webpages ，May cause the page to be stuck for 5 seconds
@@ -75,6 +98,8 @@ Improved the coding of curly braces in hieroglyphy, reducing the size, drawing o
 建议在最新超高版本 chrome 或者 Firefox 或者 safari 浏览器中运行
 
 或者用 webpack 或者 parcel bundler,babel 转换代码,可以在老旧浏览器中运行
+
+# 感谢
 
 <a href="https://github.com/aemkei/jsfuck/blob/master/jsfuck.js">https://github.com/aemkei/jsfuck/blob/master/jsfuck.js
 </a>
