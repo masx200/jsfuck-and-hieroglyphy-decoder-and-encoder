@@ -10,6 +10,9 @@
     "devDependencies": {
         "@babel/core": "^7.15.5",
         "@babel/preset-env": "^7.15.0",
+        "@rollup/plugin-babel": "^5.3.0",
+        "@types/babel__core": "^7.1.16",
+        "@types/node": "^16.9.2",
         "babel-plugin-clean-code": "^0.0.3",
         "core-js": "3",
         "prettier": "^2.3.2",
@@ -27,8 +30,9 @@
     },
     "homepage": "https://github.com/masx200/JSfuck-and-hieroglyphy-Decoder-and-ENCODER#readme",
     "scripts": {
-        "start": "vite serve  src",
-        "format": "npx prettier --write *.md *.json */*.js */*.html */*.css *.js"
+        "build": "vite build --config  vite.config.ts",
+        "start": "vite serve  --config  vite.config.ts",
+        "format": "npx prettier --write *.md *.json */*.js */*.html */*.css *.js *.ts"
     },
     "keywords": [],
     "dependencies": {},

@@ -23,7 +23,7 @@ export default (function (global, undefined) {
         hieroglyphyScript: hieroglyphyScript,
     };
     //   window.hieroglyphy = API;
-    typeof exports === "undefined" && (global.hieroglyphy = API);
+    // typeof exports === "undefined" && (global.hieroglyphy = API);
     //   console.log(
     //     global.hieroglyphy
     //   )
