@@ -1,9 +1,13 @@
+//@ts-ignore
 import { getpostfixandprefix } from "./getpostfixandprefix.js";
+//@ts-ignore
 import { isMatching } from "./isMatching.js";
+//@ts-ignore
 import { patternCreator } from "./patternCreator.js";
+//@ts-ignore
 import { transformstring } from "./transformstring.js";
 ("use strict");
-export function decode(code) {
+export function decode(code: string): string {
     const inputcode = code.trim();
     if (inputcode.length === 0) {
         throw new Error("输入不能为空");

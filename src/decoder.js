@@ -1,5 +1,5 @@
 "use strict";
-import { decode } from "./decode.js";
+import { decode } from "./decode";
 $("run").onclick = function () {
     new Function($("code2").value)();
 };
