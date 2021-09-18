@@ -1,5 +1,4 @@
 {
-    "source": "src/*.html",
     "publishConfig": {
         "registry": "https://registry.npmjs.org/",
         "access": "public"
@@ -9,11 +8,12 @@
     "module": "src/index.js",
     "main": "src/index.js",
     "devDependencies": {
+        "@babel/core": "^7.15.5",
         "@babel/preset-env": "^7.15.0",
         "babel-plugin-clean-code": "^0.0.3",
         "core-js": "3",
         "prettier": "^2.3.2",
-        "@babel/core": "^7.15.5"
+        "vite": "^2.5.8"
     },
     "repository": {
         "type": "git",
@@ -27,8 +27,7 @@
     },
     "homepage": "https://github.com/masx200/JSfuck-and-hieroglyphy-Decoder-and-ENCODER#readme",
     "scripts": {
-        "build": "parcel build ./src/*.html",
-        "start": "parcel serve  ./src/*.html",
+        "start": "vite serve  src",
         "format": "npx prettier --write *.md *.json */*.js */*.html */*.css *.js"
     },
     "keywords": [],
