@@ -37,6 +37,10 @@ import {
 
 `decode`
 
+# 在线演示
+
+https://js-fuck-and-hieroglyphy-decoder-and-encoder.vercel.app
+
 # 优化了 jsfuck 的代码执行流程,修复了加载 jsfuck 导致网页卡顿的问题
 
 Loading jsfuck causes problems with webpages ，May cause the page to be stuck for 5 seconds
