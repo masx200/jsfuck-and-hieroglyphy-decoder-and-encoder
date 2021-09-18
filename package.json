@@ -49,5 +49,9 @@
     "resolutions": {
         "postcss": "8.3.6",
         "ansi-html": "npm:ansi-html-community"
-    }
+    },
+    "files": [
+        "dist/index.d.ts",
+        "dist/index.js"
+    ]
 }
