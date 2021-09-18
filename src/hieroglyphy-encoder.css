@@ -84,7 +84,7 @@ textarea::-webkit-input-placeholder {
 } /* textarea:hover { */ /* background-color: #22313F; color: #f2f2f2; */ /* } */ /* textarea:focus { /* /* background-color: #1a252f; /* color: #fff; } */ /* textarea { height: 550px; }*/
 footer {
     width: calc(100% - 40px);
-    position: absolute;
+    /* position: absolute; */
     bottom: 20px;
 }
 footer > p a {
