@@ -25,7 +25,7 @@ export default defineConfig({
                     root,
                     "JSFuck---Write-any-JavaScript-with-6-Characters_-[]()!+.html"
                 ),
-                resolve(root, "JSfuck-Decoder--and-hieroglyphy--decoder.html"),
+                // resolve(root, "JSfuck-Decoder--and-hieroglyphy--decoder.html"),
             ],
         },
     },
