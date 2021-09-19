@@ -12,7 +12,7 @@ export default /*! JSFuck 0.4.0 - http://jsfuck.com */
     //     (global.JSFuck = {
     //         encode: encode,
     //     });
-    typeof module !== "undefined" && (module.exports = { encode });
+    // typeof module !== "undefined" && (module.exports = { encode });
     var USE_CHAR_CODE = "USE_CHAR_CODE";
 
     var MIN = 32,

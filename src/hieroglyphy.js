@@ -30,9 +30,9 @@ export default (function (global, undefined) {
     /*    if (global.define && global.define.amd) {
         global.define([], API);
     } else  */
-    if (typeof exports !== "undefined") {
-        module.exports = API;
-    }
+    // if (typeof exports !== "undefined") {
+    //     module.exports = API;
+    // }
     // } else {
     //     global.hieroglyphy = API;
     // }
