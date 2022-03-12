@@ -4,6 +4,7 @@ import { resolve } from "path";
 const root = resolve(__dirname, "src");
 import { minifyHtml } from "vite-plugin-html";
 export default defineConfig({
+    esbuild: { drop: ["console", "debugger"] },
     root,
     plugins: [
         minifyHtml({ removeAttributeQuotes: false }),
@@ -13,6 +14,7 @@ export default defineConfig({
         }),
     ],
     build: {
+        minify: "esbuild",
         terserOptions: {
             compress: { drop_console: true, drop_debugger: true },
         },
