@@ -3,10 +3,15 @@ import { babel } from "@rollup/plugin-babel";
 import { resolve } from "path";
 const root = resolve(__dirname, "src");
 import { createHtmlPlugin } from "vite-plugin-html";
+import { VitePWA } from "vite-plugin-pwa";
 export default defineConfig({
     esbuild: { drop: ["console", "debugger"] },
     root,
     plugins: [
+        VitePWA({
+            registerType: "autoUpdate",
+            workbox: { globPatterns: ["*/*"] },
+        }),
         babel({
             exclude: [/node_modules/],
             babelHelpers: "bundled",
