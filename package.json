@@ -45,7 +45,7 @@
     },
     "homepage": "https://github.com/masx200/JSfuck-and-hieroglyphy-Decoder-and-ENCODER#readme",
     "scripts": {
-        "preview":"vite preview",
+        "preview": "vite preview",
         "rollup": "rollup -c rollup.config.js",
         "build": "vite build --config  vite.config.ts",
         "start": "vite serve  --config  vite.config.ts",
