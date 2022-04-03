@@ -54,6 +54,7 @@
     },
     "keywords": [],
     "resolutions": {
+        "json5": "2.2.1",
         "minimist ": "1.2.6",
         "postcss": "8.3.6",
         "ansi-html": "npm:ansi-html-community"
