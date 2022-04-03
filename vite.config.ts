@@ -39,10 +39,7 @@ export default defineConfig({
             input: [
                 resolve(root, "index.html"),
                 resolve(root, "hieroglyphy-encoder.html"),
-                resolve(
-                    root,
-                    "JSFuck---Write-any-JavaScript-with-6-Characters_-[]()!+.html"
-                ),
+                resolve(root, "jsfuck-encoder.html"),
                 // resolve(root, "JSfuck-Decoder--and-hieroglyphy--decoder.html"),
             ],
         },

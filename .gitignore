@@ -64,7 +64,7 @@ typings/
 dist/
 .parcel-cache/
 dist/hieroglyphy-encoder.html
-dist/JSFuck---Write-any-JavaScript-with-6-Characters_-[]()!+.html
+dist/jsfuck-encoder.html
 dist/JSfuck-Decoder--and-hieroglyphy--decoder.html
 .vscode/settings.json
 *.zip
