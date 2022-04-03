@@ -1,25 +1,41 @@
 import { defineConfig } from "vite";
-import babel from "@rollup/plugin-babel";
+import { babel } from "@rollup/plugin-babel";
 import { resolve } from "path";
 const root = resolve(__dirname, "src");
-import { minifyHtml } from "vite-plugin-html";
+import { createHtmlPlugin } from "vite-plugin-html";
 export default defineConfig({
     esbuild: { drop: ["console", "debugger"] },
     root,
     plugins: [
-        minifyHtml({ removeAttributeQuotes: false }),
         babel({
+            exclude: [/node_modules/],
             babelHelpers: "bundled",
             configFile: resolve(__dirname, "babel.config.js"),
+            extensions: [".ts", ".js"],
         }),
-    ],
+        // createHtmlPlugin({
+        //     minify: {
+        //         removeAttributeQuotes: false,
+        //         collapseWhitespace: true,
+        //     },
+        // }),
+    ].flat(),
     build: {
-        minify: "esbuild",
+        minify: "terser",
         terserOptions: {
             compress: { drop_console: true, drop_debugger: true },
         },
         target: "es2015",
         rollupOptions: {
+            plugins: [
+                createHtmlPlugin({
+                    minify: {
+                        removeAttributeQuotes: false,
+                        collapseWhitespace: true,
+                    },
+                }),
+            ].flat(),
+
             input: [
                 resolve(root, "index.html"),
                 resolve(root, "hieroglyphy-encoder.html"),

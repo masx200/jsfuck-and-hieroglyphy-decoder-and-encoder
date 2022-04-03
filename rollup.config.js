@@ -9,7 +9,7 @@ export default defineConfig({
     plugins: [
         noderesolve(),
         commonjs(),
-        ts({}),
+        ts({ transpiler: "typescript" }),
         babel({
             babelHelpers: "bundled",
             configFile: resolve(__dirname, "babel.config.js"),
@@ -20,5 +20,8 @@ export default defineConfig({
         }),
     ],
     input: "src/index.ts",
-    output: { format: "esm", file: "dist/index.js" },
+    output: [
+        { format: "esm", file: "dist/index.js" },
+        { format: "esm", file: "dist/index.cjs" },
+    ],
 });
