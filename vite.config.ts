@@ -28,6 +28,7 @@ export default defineConfig({
     build: {
         minify: "terser",
         terserOptions: {
+            format: { comments: false },
             compress: { drop_console: true, drop_debugger: true },
         },
         target: "es2015",
@@ -35,7 +36,7 @@ export default defineConfig({
             plugins: [
                 createHtmlPlugin({
                     minify: {
-                        removeComments:true,
+                        removeComments: true,
                         removeAttributeQuotes: false,
                         collapseWhitespace: true,
                     },
