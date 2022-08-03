@@ -35,6 +35,7 @@ export default defineConfig({
             plugins: [
                 createHtmlPlugin({
                     minify: {
+                        removeComments:true,
                         removeAttributeQuotes: false,
                         collapseWhitespace: true,
                     },
