@@ -1,4 +1,5 @@
 {
+    "type": "module",
     "version": "2.1.0",
     "exports": {
         ".": {
@@ -48,6 +49,7 @@
     },
     "homepage": "https://github.com/masx200/JSfuck-and-hieroglyphy-Decoder-and-ENCODER#readme",
     "scripts": {
+        "test": "node ./test/index.js",
         "preview": "vite preview",
         "rollup": "rollup -c rollup.config.js",
         "build": "npm run rollup && vite build --config  vite.config.ts",
