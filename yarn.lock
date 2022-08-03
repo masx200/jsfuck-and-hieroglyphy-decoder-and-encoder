@@ -2623,7 +2623,7 @@ __metadata:
     "@types/html-minifier-terser": ^6.1.0
     "@types/node": ^18.6.3
     babel-plugin-clean-code: ^0.0.3
-    core-js: 3
+    core-js: ^3.24.1
     minimist: ^1.2.6
     prettier: ^2.7.1
     rollup: ^2.77.2
@@ -3535,10 +3535,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"core-js@npm:3":
-  version: 3.16.1
-  resolution: "core-js@npm:3.16.1"
-  checksum: 7924fa2a7f00e3a33bbe92fe42ba59fbbe7e01557a59824d000976300be3ba224cca20161f61654b3861ea80d244d6adfee6ed3ae6d6d9931210a37510fb7c9b
+"core-js@npm:^3.24.1":
+  version: 3.24.1
+  resolution: "core-js@npm:3.24.1"
+  checksum: 6fb5bf0fd9e9f3e69d95616dd03332fea6758a715d2628c108b5faf17b48b0f580e90c4febb0a523c4665b0991a810de16289f86187fe79d70cc722dbd3edf0e
   languageName: node
   linkType: hard
 
