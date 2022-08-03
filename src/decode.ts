@@ -1,4 +1,6 @@
 //@ts-ignore
+import { decode_unicode } from "./decode_unicode.js";
+//@ts-ignore
 import { getpostfixandprefix } from "./getpostfixandprefix.js";
 //@ts-ignore
 import { isMatching } from "./isMatching.js";
@@ -19,7 +21,7 @@ export function decode(code: string): string {
             try {
                 // setoutput(result);
                 // console.log("匹配成功");
-                return transformstring(result);
+                return decode_unicode(transformstring(result));
             } catch (e) {
                 // throw e;
                 // console.log("匹配错误")
@@ -31,7 +33,7 @@ export function decode(code: string): string {
         }
     }
     try {
-        return transformstring(inputcode);
+        return decode_unicode( transformstring(inputcode));
         // result = mytext;
         // setoutput(result);
         // document.querySelector("#code2").value = mytext;

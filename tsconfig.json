@@ -1,9 +1,14 @@
 {
+    "include": ["src/*.ts"],
     "compilerOptions": {
+        "lib": ["esnext"],
+        "isolatedModules": true,
+        "target": "esnext",
         "removeComments": true,
         "strict": true,
         "declaration": true,
         "skipDefaultLibCheck": true,
-        "skipLibCheck": true
+        "skipLibCheck": true,
+        "moduleResolution": "node"
     }
 }

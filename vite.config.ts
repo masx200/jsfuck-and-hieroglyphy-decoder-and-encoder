@@ -4,6 +4,7 @@ import { resolve } from "path";
 const root = resolve(__dirname, "src");
 import { createHtmlPlugin } from "vite-plugin-html";
 import { VitePWA } from "vite-plugin-pwa";
+import { Plugin } from "rollup";
 export default defineConfig({
     esbuild: { drop: ["console", "debugger"] },
     root,
@@ -15,7 +16,7 @@ export default defineConfig({
         babel({
             exclude: [/node_modules/],
             babelHelpers: "bundled",
-            configFile: resolve(__dirname, "babel.config.js"),
+            // configFile: resolve(__dirname, "babel.config.cjs"),
             extensions: [".ts", ".js"],
         }),
         // createHtmlPlugin({
@@ -41,7 +42,7 @@ export default defineConfig({
                         collapseWhitespace: true,
                     },
                 }),
-            ].flat(),
+            ].flat() as Plugin[],
 
             input: [
                 resolve(root, "index.html"),

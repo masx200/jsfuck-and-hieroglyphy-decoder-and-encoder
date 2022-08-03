@@ -51,10 +51,10 @@
     "scripts": {
         "test": "node ./test/index.js",
         "preview": "vite preview",
-        "rollup": "rollup -c rollup.config.js",
+        "rollup": "rollup -c rollup.config.mjs",
         "build": "npm run rollup && vite build --config  vite.config.ts",
-        "start": "vite serve  --config  vite.config.ts",
-        "format": "npx prettier --write *.md *.json */*.js */*.html */*.css *.js *.ts"
+        "dev": "vite serve  --config  vite.config.ts",
+        "format": "npx prettier --write *.md *.json */*.js */*.html */*.css *.js *.ts *.mjs"
     },
     "keywords": [],
     "resolutions": {
