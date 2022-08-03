@@ -1,6 +1,6 @@
 {
     "type": "module",
-    "version": "2.1.1",
+    "version": "2.1.2",
     "exports": {
         ".": {
             "import": "./dist/index.js",
@@ -24,6 +24,7 @@
         "@types/babel__core": "^7.1.19",
         "@types/html-minifier-terser": "^6.1.0",
         "@types/node": "^18.6.3",
+        "ava": "^4.3.1",
         "babel-plugin-clean-code": "^0.0.3",
         "core-js": "^3.24.1",
         "minimist": "^1.2.6",
@@ -49,12 +50,12 @@
     },
     "homepage": "https://github.com/masx200/JSfuck-and-hieroglyphy-Decoder-and-ENCODER#readme",
     "scripts": {
-        "test": "node ./test/index.js",
+        "test": "ava",
         "preview": "vite preview",
         "rollup": "rollup -c rollup.config.mjs",
         "build": "npm run rollup && vite build --config  vite.config.ts",
         "dev": "vite serve  --config  vite.config.ts",
-        "format": "npx prettier --write *.md *.json */*.js */*.html */*.css *.js *.ts *.mjs"
+        "format": "npx prettier --write *.md *.json */*.js */*.html */*.css  *.ts *.mjs"
     },
     "keywords": [],
     "resolutions": {
