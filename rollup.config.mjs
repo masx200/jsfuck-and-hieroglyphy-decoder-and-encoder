@@ -1,7 +1,7 @@
 import { defineConfig } from "rollup";
-import { resolve, dirname } from "path";
-import { fileURLToPath } from "url";
-var __dirname = dirname(fileURLToPath(import.meta.url));
+// import { resolve, dirname } from "path";
+// import { fileURLToPath } from "url";
+// var __dirname = dirname(fileURLToPath(import.meta.url));
 import commonjs from "@rollup/plugin-commonjs";
 import noderesolve from "@rollup/plugin-node-resolve";
 import { terser } from "rollup-plugin-terser";

@@ -69,3 +69,5 @@ dist/JSfuck-Decoder--and-hieroglyphy--decoder.html
 .vscode/settings.json
 *.zip
 .yarn/install-state.gz
+yarn.lock
+vite.config.ts.timestamp-1660961470393.mjs

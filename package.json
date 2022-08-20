@@ -16,6 +16,7 @@
     "main": "dist/index.cjs",
     "types": "dist/index.d.ts",
     "devDependencies": {
+        "vitest": "^0.22.1",
         "@babel/core": "^7.18.10",
         "@babel/preset-env": "^7.18.10",
         "@rollup/plugin-babel": "^5.3.1",
@@ -24,7 +25,6 @@
         "@types/babel__core": "^7.1.19",
         "@types/html-minifier-terser": "^6.1.0",
         "@types/node": "^18.6.3",
-        "ava": "^4.3.1",
         "babel-plugin-clean-code": "^0.0.3",
         "core-js": "^3.24.1",
         "minimist": "^1.2.6",
@@ -50,7 +50,7 @@
     },
     "homepage": "https://github.com/masx200/JSfuck-and-hieroglyphy-Decoder-and-ENCODER#readme",
     "scripts": {
-        "test": "ava",
+        "test": "vitest run",
         "preview": "vite preview",
         "rollup": "rollup -c rollup.config.mjs",
         "build": "npm run rollup && vite build --config  vite.config.ts",
@@ -73,5 +73,6 @@
         "dist/index.cjs",
         "dist/index.js"
     ],
-    "packageManager": "yarn@3.2.0"
+    "packageManager": "yarn@3.2.0",
+    "dependencies": {}
 }
