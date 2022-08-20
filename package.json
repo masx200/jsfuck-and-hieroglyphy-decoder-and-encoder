@@ -23,7 +23,7 @@
         "@rollup/plugin-commonjs": "^22.0.1",
         "@rollup/plugin-node-resolve": "^13.3.0",
         "@types/babel__core": "^7.1.19",
-        "@types/html-minifier-terser": "^6.1.0",
+        "@types/html-minifier-terser": "^7.0.0",
         "@types/node": "^18.6.3",
         "babel-plugin-clean-code": "^0.0.3",
         "core-js": "^3.24.1",
