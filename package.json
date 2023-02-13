@@ -16,7 +16,7 @@
     "main": "dist/index.cjs",
     "types": "dist/index.d.ts",
     "devDependencies": {
-        "vitest": "^0.24.3",
+        "vitest": "^0.28.5",
         "@babel/core": "^7.18.10",
         "@babel/preset-env": "^7.18.10",
         "@rollup/plugin-babel": "^6.0.0",
